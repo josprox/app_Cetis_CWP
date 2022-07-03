@@ -61,6 +61,7 @@ ul, li {
 
 .inicio .titulo h1 {
   color: #fff;
+  margin-top: 8px;
 }
 
 .inicio .nav {
@@ -95,6 +96,10 @@ ul, li {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
+}
+
+.inicio .nav .nav_ul li {
+  margin-top: 12px;
 }
 
 .inicio .nav a {
@@ -152,6 +157,7 @@ ul, li {
 
 .media-element .media p {
   color: #fff;
+  margin-top: 12px;
 }
 
 .media-element .media img {
