@@ -9,7 +9,13 @@
   &::-webkit-scrollbar {
     width: 12px;
     background-color: rgba(0, 0, 0, 0.5);
-  }
+    @media screen and (max-width: 500px) {
+      &{
+        display: none;
+      }
+    }
+        
+    }
 
   &::-webkit-scrollbar-thumb {
     background: rgb(240, 137, 103);
@@ -135,18 +141,23 @@ ul,li{
     p{
         color: $blanco;
         font-weight: bold;
-        font-size: 1em;
+        font-size: .5em;
         text-align: center;
+        display: block;
         @media screen and (min-width: 240px){
             &{
-                font-size: 2em;
+                font-size: 1em;
             }
         }
         @media screen and (min-width: 460px){
             &{
-                font-size: 3em;
+                font-size: 1.5em;
             }
-            
+        }
+        @media screen and (min-width: 768px){
+            &{
+                font-size: 2em;
+            }
         }
     }
     .two_x_two{
