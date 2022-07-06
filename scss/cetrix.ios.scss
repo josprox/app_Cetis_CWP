@@ -34,18 +34,26 @@ p, h1, h2, h3, h4, h5{
 
 body{
     // usar una imagen de fondo la cuál usará toda la pantalla y no se repetirá
-    background-image: url("../img/bk_3.webp");
+    background-image: url("../img/bk_4.webp");
     background-color: aqua;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    height: 100%;
+    width: 100%;
 }
+html{
+    height:100%; /*Siempre es necesario cuando trabajamos con alturas*/
+    }
 ul,li{
     list-style: none;
 }
 
 .inicio{
+    position: -webkit-sticky;  // required for Safari
+    position: sticky;
+    top: 0; // required as well.
     width: 98%;
     margin: 8px auto;
     display: flex;
@@ -320,6 +328,8 @@ ul,li{
     }
     .two_x_two{
         background-color: $azul;
+        padding: 12px;
+        width: 100%;
         margin: 5px;
         grid-column: 1 / 3;
         grid-row: 1 / 3;
@@ -337,6 +347,8 @@ ul,li{
     }
     .one_x_tree{
         background-color: $verde;
+        padding: 12px;
+        width: 100%;
         margin: 5px;
         grid-column: 3 / 3;
         grid-row: 1 / 2;
@@ -354,7 +366,8 @@ ul,li{
     }
     .tree_x_tree{
         background-color: $rosa;
-        margin: 5px;
+        padding: 12px;
+        width: 100%;
         grid-column: 3 / 3;
         grid-row: 2 / 2;
         border-radius: 12px;
@@ -371,6 +384,78 @@ ul,li{
     }
 }
 
+#menu_principal{
+    background-color: rgba(0, 0, 0, 0.8);
+    left:0px; /*A la derecha deje un espacio de 0px*/
+    right:0px; /*A la izquierda deje un espacio de 0px*/
+    bottom: 0;
+    height: 50px;
+    padding: 12px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    .lista_menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-left: -12px;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 1em;
+                    color: #FFF;
+                    text-decoration: none;
+                    transition: .2s all;
+                    &:hover{
+                        color: $completado;
+                    }
+                    p{
+                        display: none;
+                        @media screen and (min-width: 800px){
+                            display: block;
+                        }
+                    }
+                }
+            }
+    }
+}
+
+.tarjeta_perfil{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: -40px;
+    .tarjeta_perfil_foto{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: 0 auto;
+        img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: -180px;
+        }
+    }
+    .tarjeta_perfil_datos{
+        background-color: $blanco;
+        padding: 0 12px;
+        padding-top: 50px;
+        padding-bottom: 12px;
+        border-radius: 12px;
+    }
+}
+
 .contenedor{
     width: 90%;
     margin: 8px auto;
@@ -379,4 +464,58 @@ ul,li{
     padding: 8px;
     border-radius: 12px;
     text-align: center;
+}
+
+.contenedor_sin_fondo{
+    width: 90%;
+    margin: 8px auto;
+}
+
+table, th, td{
+    background: $color-esqueleto;
+    border-radius: 12px;
+    font-size: 1em;
+    padding: 8px;
+    margin: 0 auto;
+    border: 3px solid $negro;
+    
+}
+
+div#div_file{
+    position: relative;
+    margin: 12px auto;
+    padding: 10px;
+    width: 150px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  input#imagen{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  
+  }
+
+  input#btn_enviar {
+    padding: 15px;
+    background-color: #60cf4e;
+    color: #fff;
+    border: 0;
+    font-size: 1em;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+.espaciador{
+    height: 50px;
 }
