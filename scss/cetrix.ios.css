@@ -344,7 +344,6 @@ ul, li {
 }
 
 .grid_2 .two_x_one {
-  background-color: rgba(0, 0, 0, 0.5);
   margin: 5px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -367,7 +366,6 @@ ul, li {
 }
 
 .grid_2 .two_x_two {
-  background-color: rgba(0, 0, 0, 0.5);
   margin: 5px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
