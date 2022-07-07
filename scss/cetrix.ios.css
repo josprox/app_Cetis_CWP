@@ -43,6 +43,7 @@ body {
 }
 
 html {
+  width: 100%;
   height: 100%;
   /*Siempre es necesario cuando trabajamos con alturas*/
 }
@@ -168,6 +169,7 @@ ul, li {
   margin: 0 8px;
   -webkit-transition: .2s all;
   transition: .2s all;
+  cursor: pointer;
 }
 
 .media-element .media:hover {
@@ -479,6 +481,7 @@ ul, li {
           justify-content: center;
   -webkit-transition: .2s all;
   transition: .2s all;
+  cursor: pointer;
 }
 
 .grid_3 .two_x_two:hover {
@@ -511,6 +514,7 @@ ul, li {
           justify-content: center;
   -webkit-transition: .2s all;
   transition: .2s all;
+  cursor: pointer;
 }
 
 .grid_3 .one_x_tree:hover {
@@ -541,6 +545,7 @@ ul, li {
           justify-content: center;
   -webkit-transition: .2s all;
   transition: .2s all;
+  cursor: pointer;
 }
 
 .grid_3 .tree_x_tree:hover {
@@ -714,5 +719,166 @@ input#btn_enviar {
 
 .espaciador {
   height: 50px;
+}
+
+#popup, #popupdos, #horario, #perfil {
+  display: none;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#popup .popup_contenido, #popupdos .popup_contenido, #horario .popup_contenido, #perfil .popup_contenido {
+  position: relative;
+  top: 50%;
+  width: 90%;
+  height: auto;
+  border-radius: 15px;
+  background: #fff;
+  margin: auto;
+  margin-top: -280px;
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+#popup .popup_contenido .popup_titulo, #popupdos .popup_contenido .popup_titulo, #horario .popup_contenido .popup_titulo, #perfil .popup_contenido .popup_titulo {
+  background-color: #dc3545;
+  color: #fff;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+#popup .popup_contenido .popup_contenido_texto, #popupdos .popup_contenido .popup_contenido_texto, #horario .popup_contenido .popup_contenido_texto, #perfil .popup_contenido .popup_contenido_texto {
+  background-color: #fff;
+  padding: 12px;
+  text-align: justify;
+}
+
+#popup .popup_contenido .popup_boton, #popupdos .popup_contenido .popup_boton, #horario .popup_contenido .popup_boton, #perfil .popup_contenido .popup_boton {
+  padding: 12px;
+  text-align: center;
+}
+
+#popup .popup_contenido .popup_boton a, #popupdos .popup_contenido .popup_boton a, #horario .popup_contenido .popup_boton a, #perfil .popup_contenido .popup_boton a {
+  background: #15d798;
+  border-radius: 11px;
+  padding: 20px 45px;
+  color: #ffffff;
+  display: inline-block;
+  font: normal bold 1.2em/1 "Open Sans", sans-serif;
+  text-align: center;
+  cursor: pointer;
+}
+
+#popup .popup_contenido .popup_boton button, #popupdos .popup_contenido .popup_boton button, #horario .popup_contenido .popup_boton button, #perfil .popup_contenido .popup_boton button {
+  background: #15d798;
+  border-radius: 11px;
+  padding: 20px 45px;
+  color: #ffffff;
+  display: inline-block;
+  font: normal bold 1.2em/1 "Open Sans", sans-serif;
+  text-align: center;
+  border: none;
+}
+
+form {
+  padding: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+form label, form input, form textarea {
+  display: block;
+  margin: 6px auto;
+  text-align: center;
+}
+
+form input {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  border: none;
+  padding: 8px;
+  color: #fff;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form textarea {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  border: none;
+  padding: 8px;
+  color: #fff;
+  text-align: justify;
+}
+
+form textarea:focus {
+  outline: none;
+}
+
+form button {
+  background-color: #dc3545;
+  border-radius: 12px;
+  border: none;
+  padding: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+form button:focus {
+  outline: none;
+}
+
+.pdf {
+  border-radius: 12px;
+  display: block;
+  margin: 8px auto;
+  width: 96%;
+  height: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .pdf {
+    min-width: 300px;
+    min-height: 350px;
+  }
+}
+
+.center_text {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=cetrix.ios.css.map */

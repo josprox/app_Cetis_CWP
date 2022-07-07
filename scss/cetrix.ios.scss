@@ -44,6 +44,7 @@ body{
     width: 100%;
 }
 html{
+    width: 100%;
     height:100%; /*Siempre es necesario cuando trabajamos con alturas*/
     }
 ul,li{
@@ -127,6 +128,7 @@ ul,li{
         background-color: rgba(0, 0, 0, 0.5);
         margin: 0 8px;
         transition: .2s all;
+        cursor: pointer;
         &:hover{
             background-color: rgba(0, 0, 0, 0.8);
         }
@@ -338,6 +340,7 @@ ul,li{
         align-items: center;
         justify-content: center;
         transition: .2s all;
+        cursor: pointer;
         &:hover{
             background-color: $rojo;
         }
@@ -357,6 +360,7 @@ ul,li{
         align-items: center;
         justify-content: center;
         transition: .2s all;
+        cursor: pointer;
         &:hover{
             background-color: $secundario;
         }
@@ -375,6 +379,7 @@ ul,li{
         align-items: center;
         justify-content: center;
         transition: .2s all;
+        cursor: pointer;
         &:hover{
             background-color: $naranja;
         }
@@ -518,4 +523,132 @@ div#div_file{
 
 .espaciador{
     height: 50px;
+}
+
+#popup,#popupdos,#horario,#perfil{
+    display: none;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    .popup_contenido{
+        position: relative;
+        top: 50%;
+        width: 90%;
+        height: auto;
+        border-radius: 15px;
+        background: #fff;
+        margin: auto;
+        margin-top: -280px;
+        transition: .2s all;
+        .popup_titulo{
+            background-color: $rojo;
+            color: $blanco;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            padding: 12px;
+            text-align: center;
+        }
+        .popup_contenido_texto{
+            background-color: $blanco;
+            padding: 12px;
+            text-align: justify;
+        }
+        .popup_boton{
+            padding: 12px;
+            text-align: center;
+            a{
+                background:    #15d798;
+                border-radius: 11px;
+                padding:       20px 45px;
+                color:         #ffffff;
+                display:       inline-block;
+                font:          normal bold 1.2em/1 "Open Sans", sans-serif;
+                text-align:    center;
+                cursor: pointer;
+            }
+            button{
+                background:    #15d798;
+                border-radius: 11px;
+                padding:       20px 45px;
+                color:         #ffffff;
+                display:       inline-block;
+                font:          normal bold 1.2em/1 "Open Sans", sans-serif;
+                text-align:    center;
+                border: none;
+            }
+        }
+    }
+}
+
+form{
+    padding: 12px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    label,input,textarea{
+        display: block;
+        margin: 6px auto;
+        text-align: center;
+    }
+    input{
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        border: none;
+        padding: 8px;
+        color: $blanco;
+        &:focus{
+            outline: none;
+        }
+    }
+    textarea{
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 12px;
+        border: none;
+        padding: 8px;
+        color: $blanco;
+        text-align: justify;
+        &:focus{
+            outline: none;
+        }
+    }
+    button{
+        background-color: $rojo;
+        border-radius: 12px;
+        border: none;
+        padding: 8px;
+        color: $blanco;
+        cursor: pointer;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+.pdf {
+    border-radius: 12px;
+    display: block;
+    margin: 8px auto;
+    width: 96%;
+    height: 100%;
+    @media screen and (min-width: 600px) {
+        &{
+            min-width: 300px;
+            min-height: 350px;
+        }
+    }
+}
+
+.center_text{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
