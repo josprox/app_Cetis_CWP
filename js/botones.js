@@ -33,3 +33,12 @@ $(document).ready(function(){
         $('#perfil').hide();
     });
 });
+
+$(document).ready(function(){
+    $('.settings_open').click(function(){
+        $('#settings').show();
+    });
+    $('.settings_close').click(function(){
+        $('#settings').hide();
+    });
+});

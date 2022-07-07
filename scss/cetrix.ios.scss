@@ -32,6 +32,10 @@ p, h1, h2, h3, h4, h5{
     margin: 0;
 }
 
+img{
+    object-fit: cover;
+}
+
 body{
     // usar una imagen de fondo la cuál usará toda la pantalla y no se repetirá
     background-image: url("../img/bk_4.webp");
@@ -528,7 +532,7 @@ div#div_file{
     height: 50px;
 }
 
-#popup,#popupdos,#horario,#perfil{
+#popup,#popupdos,#horario,#perfil,#settings{
     display: none;
     left: 0;
     position: fixed;
@@ -654,4 +658,42 @@ form{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.tiendas{
+    background-color: $blanco;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 12px auto;
+    .tiendas_oficiales{
+        h1{
+            text-align: center;
+        }
+    }
+}
+
+.card_tienda{
+    background-color: $blanco;
+    border-radius: 12px;
+    padding: 12px;
+    margin: 12px auto;
+    width: 210px;
+    height: auto;
+    border: 1px $negro solid;
+    box-shadow: -4px 0px 18px 0px rgba(0,0,0,0.43);
+    -webkit-box-shadow: -4px 0px 18px 0px rgba(0,0,0,0.43);
+    -moz-box-shadow: -4px 0px 18px 0px rgba(0,0,0,0.43);
+    .card_tienda_titulo{
+        h1{
+            text-align: center;
+        }
+    }
+    .img_tienda{
+        img{
+            width: 180px;
+            height: 120px;
+            border: 1px $negro solid;
+            border-radius: 12px;
+        }
+    }
 }

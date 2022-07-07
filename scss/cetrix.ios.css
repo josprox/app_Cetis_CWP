@@ -31,6 +31,11 @@ p, h1, h2, h3, h4, h5 {
   margin: 0;
 }
 
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 body {
   background-image: url("../img/bk_4.webp");
   background-color: aqua;
@@ -725,7 +730,7 @@ input#btn_enviar {
   height: 50px;
 }
 
-#popup, #popupdos, #horario, #perfil {
+#popup, #popupdos, #horario, #perfil, #settings {
   display: none;
   left: 0;
   position: fixed;
@@ -736,7 +741,7 @@ input#btn_enviar {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#popup .popup_contenido, #popupdos .popup_contenido, #horario .popup_contenido, #perfil .popup_contenido {
+#popup .popup_contenido, #popupdos .popup_contenido, #horario .popup_contenido, #perfil .popup_contenido, #settings .popup_contenido {
   position: relative;
   top: 50%;
   width: 90%;
@@ -749,7 +754,7 @@ input#btn_enviar {
   transition: .2s all;
 }
 
-#popup .popup_contenido .popup_titulo, #popupdos .popup_contenido .popup_titulo, #horario .popup_contenido .popup_titulo, #perfil .popup_contenido .popup_titulo {
+#popup .popup_contenido .popup_titulo, #popupdos .popup_contenido .popup_titulo, #horario .popup_contenido .popup_titulo, #perfil .popup_contenido .popup_titulo, #settings .popup_contenido .popup_titulo {
   background-color: #dc3545;
   color: #fff;
   border-top-left-radius: 12px;
@@ -758,18 +763,18 @@ input#btn_enviar {
   text-align: center;
 }
 
-#popup .popup_contenido .popup_contenido_texto, #popupdos .popup_contenido .popup_contenido_texto, #horario .popup_contenido .popup_contenido_texto, #perfil .popup_contenido .popup_contenido_texto {
+#popup .popup_contenido .popup_contenido_texto, #popupdos .popup_contenido .popup_contenido_texto, #horario .popup_contenido .popup_contenido_texto, #perfil .popup_contenido .popup_contenido_texto, #settings .popup_contenido .popup_contenido_texto {
   background-color: #fff;
   padding: 12px;
   text-align: justify;
 }
 
-#popup .popup_contenido .popup_boton, #popupdos .popup_contenido .popup_boton, #horario .popup_contenido .popup_boton, #perfil .popup_contenido .popup_boton {
+#popup .popup_contenido .popup_boton, #popupdos .popup_contenido .popup_boton, #horario .popup_contenido .popup_boton, #perfil .popup_contenido .popup_boton, #settings .popup_contenido .popup_boton {
   padding: 12px;
   text-align: center;
 }
 
-#popup .popup_contenido .popup_boton a, #popupdos .popup_contenido .popup_boton a, #horario .popup_contenido .popup_boton a, #perfil .popup_contenido .popup_boton a {
+#popup .popup_contenido .popup_boton a, #popupdos .popup_contenido .popup_boton a, #horario .popup_contenido .popup_boton a, #perfil .popup_contenido .popup_boton a, #settings .popup_contenido .popup_boton a {
   background: #15d798;
   border-radius: 11px;
   padding: 20px 45px;
@@ -780,7 +785,7 @@ input#btn_enviar {
   cursor: pointer;
 }
 
-#popup .popup_contenido .popup_boton button, #popupdos .popup_contenido .popup_boton button, #horario .popup_contenido .popup_boton button, #perfil .popup_contenido .popup_boton button {
+#popup .popup_contenido .popup_boton button, #popupdos .popup_contenido .popup_boton button, #horario .popup_contenido .popup_boton button, #perfil .popup_contenido .popup_boton button, #settings .popup_contenido .popup_boton button {
   background: #15d798;
   border-radius: 11px;
   padding: 20px 45px;
@@ -884,5 +889,40 @@ form button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.tiendas {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 12px auto;
+}
+
+.tiendas .tiendas_oficiales h1 {
+  text-align: center;
+}
+
+.card_tienda {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 12px auto;
+  width: 210px;
+  height: auto;
+  border: 1px #212529 solid;
+  box-shadow: -4px 0px 18px 0px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: -4px 0px 18px 0px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: -4px 0px 18px 0px rgba(0, 0, 0, 0.43);
+}
+
+.card_tienda .card_tienda_titulo h1 {
+  text-align: center;
+}
+
+.card_tienda .img_tienda img {
+  width: 180px;
+  height: 120px;
+  border: 1px #212529 solid;
+  border-radius: 12px;
 }
 /*# sourceMappingURL=cetrix.ios.css.map */

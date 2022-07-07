@@ -24,7 +24,7 @@
                 <a href="perfil.html">
                     <li><i class="fa-solid fa-user"></i></li>
                 </a>
-                <a href="">
+                <a class="settings_open">
                     <li><i class="fa-solid fa-gear"></i></li>
                 </a>
             </ul>
@@ -105,7 +105,7 @@
 
             <div class="grid_3">
         
-                <a class="two_x_two ">
+                <a class="two_x_two" href="tienda.html">
                     <p><i class="fa-solid fa-cart-shopping"></i> Tienda</p>
                 </a>
         
@@ -218,50 +218,25 @@
         </div>
     </div>
 
+    <div id="settings">
+        <div class="popup_contenido">
+            <div class="popup_titulo">
+                <h1>Datos</h1>
+            </div>
+            <div class="popup_contenido_texto">
+                <p>Gracias por instalar Cetis CWP, esperamos sea de tu agrado.</p>
+                <p>App Cetis CWP version 8</p>
+            </div>
+            <div class="popup_boton settings_close">
+                <button>Cerrar ventana</button>
+            </div>
+        </div>
+    </div>
+
     <div class="espaciador"></div>
 
 
-    <script>
-        $(document).ready(function(){
-            $('.pp1').click(function(){
-                $('#popup').show();
-            });
-            $('.pp1_close').click(function(){
-                $('#popup').hide();
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-            $('.pp2').click(function(){
-                $('#popupdos').show();
-            });
-            $('.pp2_close').click(function(){
-                $('#popupdos').hide();
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-            $('.horario_open').click(function(){
-                $('#horario').show();
-            });
-            $('.horario_close').click(function(){
-                $('#horario').hide();
-            });
-        });
-    </script>
-
-    <script>
-        $(document).ready(function(){
-            $('.perfil_open').click(function(){
-                $('#perfil').show();
-            });
-            $('.perfil_close').click(function(){
-                $('#perfil').hide();
-            });
-        });
-    </script>
+    <script src="./js/botones.js"></script>
 
     <script src="./fontawesome/js/all.min.js"></script>
     
