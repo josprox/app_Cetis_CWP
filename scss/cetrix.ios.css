@@ -116,6 +116,10 @@ ul, li {
   margin-top: 12px;
 }
 
+.inicio .nav .nav_ul a {
+  cursor: pointer;
+}
+
 .inicio .nav a {
   color: #fff;
   text-decoration: none;
